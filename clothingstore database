@@ -1,0 +1,26 @@
+- Create a Clothing Store Database.
+CREATE TABLE clothingstore (id INTEGER PRIMARY KEY, item TEXT,  price INTEGER, size TEXT, color TEXT);
+INSERT INTO clothingstore VALUES (15, "shirt", 9.89, "small", "blue");
+INSERT INTO clothingstore VALUES (1, "shirt", 12.99, "medium", "blue"); 
+INSERT INTO clothingstore VALUES (2, "shirt", 13.99, "large", "blue");
+INSERT INTO clothingstore VALUES (3, "pants", 19.89, "small", "black");
+INSERT INTO clothingstore VALUES (4, "pants", 22.89, "medium", "black");
+INSERT INTO clothingstore VALUES (5, "pants", 25.89, "large", "black");
+INSERT INTO clothingstore VALUES (6, "shoes", 30, "small", "orange");
+INSERT INTO clothingstore VALUES (7, "shoes", 35, "medium", "orange");
+INSERT INTO clothingstore VALUES (8, "shoes", 38.99, "large", "orange");
+INSERT INTO clothingstore VALUES (9, "underwear", 4, "small", "purple");
+INSERT INTO clothingstore VALUES (10, "underwear", 5.99, "medium", "purple");
+INSERT INTO clothingstore VALUES (11, "underwear", 7, "large", "purple");
+INSERT INTO clothingstore VALUES (12, "jacket", 49.99, "small", "yellow");
+INSERT INTO clothingstore VALUES (13, "jacket", 55.99, "medium", "yellow");
+INSERT INTO clothingstore VALUES (14, "jacket", 60, "large", "yellow");
+
+- display the database and order it by item.
+SELECT * FROM clothingstore ORDER BY item;
+
+- what is the sum of the prices for the entire store?
+SELECT SUM(price) FROM clothingstore;
+
+- what is the avergae price of all the clothing items in the store?
+SELECT AVG(price) FROM clothingstore; 
