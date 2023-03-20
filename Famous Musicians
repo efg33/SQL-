@@ -1,0 +1,40 @@
+I created a table with some famous Classic Rock bands and their lead singers.
+
+CREATE TABLE singer (id integer, name text, band text); 
+
+INSERT INTO singer VALUES
+(1, 'Steven Tyler', 'Aerosmith'),
+(2, 'Jon Bon Jovi', 'Bon Jovi'),
+(3, 'Eric Clapton', 'Cream'),
+(4, 'Phil Colins', 'Genesis'),
+(5, 'Alice Cooper', 'Alice Cooper'); 
+
+I went ahead and figured out where the lead singers were born.
+CREATE TABLE location (id integer, city text); 
+
+INSERT INTO location VALUES 
+(1, 'New York City'),
+(2,'Perth Amboy'),
+(3, 'Ripley'),
+(4, 'London'),
+(5, 'Detroit'); 
+
+I created a table to fill in some of the bands most famous songs.
+CREATE TABLE song (id integer, name text);
+
+INSERT INTO song VALUES
+(1, 'Love in the Elevator'),
+(2, 'Livin on a Prayer'),
+(3, 'Layla'),
+(4, 'In the Air Tonight'),
+(5, 'Schools Out'); 
+
+I went ahead and joined the two tables where the singers name is and where they were bron.
+SELECT singer.name, location.city FROM singer
+JOIN location
+ON singer.id = location.id; 
+
+I also joined the lead singer name to the name of their most famous songs. 
+SELECT singer.name, song.name FROM singer
+JOIN song
+ON singer.id = song.id
